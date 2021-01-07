@@ -1,0 +1,21 @@
+.profile {
+  color: purple;
+  text-align: center;
+  border: 1px solid rgb(13, 36, 71);
+  border-radius: 10px;
+  box-shadow: -5px 5px 15px 0 #6e7aff;
+  width: 390px;
+  margin: auto;
+}
+
+.avatar {
+  height: 159px;
+  margin: 46px 0 16px;
+  border-radius: 100px;
+}
+
+.name {
+  font-size: 28px;
+  font-weight: 600;
+  color: black;
+}
