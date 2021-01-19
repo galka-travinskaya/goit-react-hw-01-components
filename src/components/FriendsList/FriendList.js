@@ -7,11 +7,27 @@ import s from './FriendsList.module.css';
 
 const FriendList = ({ friends }) => {
   if (friends.length === 0) return null;
-  return <ul className={s.friendList}>{friends.map(FriendListItem)}</ul>;
+  return (
+    <ul 
+      className={s.friendList}>{friends.map(prop => <FriendListItem/>)}
+    </ul>
+  )
+    
 };
 
+// FriendList.propTypes = {
+//   friends: PropTypes.array,
+// };
+
 FriendList.propTypes = {
-  friends: PropTypes.array,
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default FriendList;
